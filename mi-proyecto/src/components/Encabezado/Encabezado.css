@@ -1,16 +1,47 @@
 .encabezado {
-  height: 70px;
-  background-color: #111428;
+  height: 80px;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 40px;
+
+  background-color: #151728;
+
+  border-bottom: 1px solid #24263b;
+}
+
+.buscador {
+  width: 320px;
+
+  background-color: #23253d;
+
+  border: none;
+
+  padding: 14px 18px;
+
+  border-radius: 14px;
+
+  color: white;
+
+  font-size: 15px;
+}
+
+.buscador::placeholder {
+  color: #9ea1b3;
+}
+
+.usuario-header {
   display: flex;
   align-items: center;
 
-  padding: 0 30px;
-
-  border-bottom: 1px solid #1e223d;
+  gap: 12px;
 }
 
-.encabezado h1 {
-  font-size: 28px;
-  color: white;
+.usuario-header img {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
 }

@@ -1,22 +1,42 @@
 .sidebar {
-  width: 240px;
-  height: 85vh;
+  width: 220px;
+  height: 90vh;
 
-  background-color: #111428;
+  background-color: #151728;
 
-  border-radius: 20px;
+  border-radius: 25px;
 
-  padding: 30px 20px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  padding: 35px 20px;
 
   position: sticky;
-  top: 90px;
+  top: 20px;
 }
 
-.sidebar p {
-  font-size: 18px;
+.logo {
+  font-size: 30px;
+
+  margin-bottom: 50px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.menu-item {
+  padding: 15px;
+
+  border-radius: 14px;
+
+  font-size: 17px;
+
   cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #23253d;
 }

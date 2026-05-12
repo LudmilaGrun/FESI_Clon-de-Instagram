@@ -1,12 +1,8 @@
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
 
-  width: 100%;
-  height: 100%;
-
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
 
   display: flex;
   justify-content: center;
@@ -16,42 +12,110 @@
 }
 
 .modal-contenido {
-  width: 900px;
-  height: 600px;
+  width: 1000px;
+  height: 650px;
 
-  background-color: #111428;
+  background-color: #17182b;
 
   border-radius: 20px;
 
   overflow: hidden;
 
   display: flex;
+
+  border: 1px solid #2a2d46;
 }
 
-.modal-contenido img {
+.modal-imagen {
   width: 60%;
+  height: 100%;
+
   object-fit: cover;
 }
 
 .modal-info {
-  padding: 20px;
+  width: 40%;
 
   display: flex;
   flex-direction: column;
-  gap: 20px;
 
   color: white;
 }
 
-.modal-info button {
+.modal-header {
+  padding: 20px;
+
+  border-bottom: 1px solid #2a2d46;
+}
+
+.modal-usuario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-descripcion {
+  padding: 20px;
+
+  border-bottom: 1px solid #2a2d46;
+}
+
+.modal-descripcion span {
+  font-weight: bold;
+}
+
+.modal-comentarios {
+  flex: 1;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  overflow-y: auto;
+}
+
+.modal-footer {
+  padding: 20px;
+
+  border-top: 1px solid #2a2d46;
+}
+
+.acciones {
+  font-size: 24px;
+
+  margin-bottom: 15px;
+}
+
+.likes-modal {
+  font-weight: bold;
+
+  margin-bottom: 8px;
+}
+
+.fecha {
+  color: #9b9b9b;
+
+  font-size: 13px;
+
+  margin-bottom: 15px;
+}
+
+.modal-footer button {
+  width: 100%;
+
   background-color: #5865f2;
-  color: white;
 
   border: none;
 
-  padding: 10px;
+  color: white;
+
+  padding: 12px;
 
   border-radius: 10px;
 
   cursor: pointer;
+
+  font-weight: bold;
 }

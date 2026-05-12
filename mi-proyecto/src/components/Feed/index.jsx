@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 import { obtenerGatos } from "../../services/catsApi";
 
-function Feed() {
+function Feed({ busqueda }) {
   const [publicaciones, setPublicaciones] =
     useState([]);
 
@@ -44,26 +44,38 @@ function Feed() {
   return (
     <>
       <section className="feed">
-        {publicaciones.map((publicacion) => (
-          <div
-            key={publicacion.id}
-            onClick={() =>
-              setPublicacionSeleccionada(
-                publicacion
-              )
-            }
-          >
-            <Publicacion
-              usuario={publicacion.usuario}
-              imagen={publicacion.imagen}
-              likes={publicacion.likes}
-              descripcion={
-                publicacion.descripcion
-              }
-            />
-          </div>
-        ))}
-      </section>
+
+  {publicaciones
+    .filter((publicacion) =>
+      publicacion.usuario
+        .toLowerCase()
+        .includes(busqueda.toLowerCase())
+    )
+    .map((publicacion) => (
+
+      <div
+        key={publicacion.id}
+        onClick={() =>
+          setPublicacionSeleccionada(
+            publicacion
+          )
+        }
+      >
+
+        <Publicacion
+          usuario={publicacion.usuario}
+          imagen={publicacion.imagen}
+          likes={publicacion.likes}
+          descripcion={
+            publicacion.descripcion
+          }
+        />
+
+      </div>
+
+    ))}
+
+</section>
 
       <ModalPublicacion
         publicacion={
