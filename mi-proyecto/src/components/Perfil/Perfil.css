@@ -1,0 +1,14 @@
+.perfil {
+  width: 260px;
+  height: fit-content;
+
+  background-color: #111428;
+
+  border-radius: 20px;
+
+  padding: 25px;
+}
+
+.perfil h3 {
+  margin-bottom: 10px;
+}
