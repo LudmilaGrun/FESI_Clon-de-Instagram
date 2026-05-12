@@ -48,3 +48,14 @@
 .publicacion-info span {
   font-weight: bold;
 }
+
+.boton-like {
+  background: none;
+  border: none;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  margin-bottom: 10px;
+}

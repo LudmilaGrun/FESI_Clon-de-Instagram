@@ -1,6 +1,29 @@
 import "./Publicacion.css";
 
-function Publicacion({ usuario, imagen, likes, descripcion }) {
+import { useState } from "react";
+
+function Publicacion({
+  usuario,
+  imagen,
+  likes,
+  descripcion,
+}) {
+  const [tieneLike, setTieneLike] =
+    useState(false);
+
+  const [cantidadLikes, setCantidadLikes] =
+    useState(likes);
+
+  const manejarLike = () => {
+    if (tieneLike) {
+      setCantidadLikes(cantidadLikes - 1);
+    } else {
+      setCantidadLikes(cantidadLikes + 1);
+    }
+
+    setTieneLike(!tieneLike);
+  };
+
   return (
     <article className="publicacion">
       <div className="publicacion-header">
@@ -16,7 +39,17 @@ function Publicacion({ usuario, imagen, likes, descripcion }) {
       />
 
       <div className="publicacion-info">
-        <p className="likes">{likes} likes</p>
+
+        <button
+          className="boton-like"
+          onClick={manejarLike}
+        >
+          {tieneLike ? "❤️" : "🤍"}
+        </button>
+
+        <p className="likes">
+          {cantidadLikes} likes
+        </p>
 
         <p>
           <span>{usuario}</span> {descripcion}
