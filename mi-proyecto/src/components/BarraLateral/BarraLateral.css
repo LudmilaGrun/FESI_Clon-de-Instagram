@@ -1,0 +1,28 @@
+.barra-lateral {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.menu {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  border: 1px solid #dbdbdb;
+}
+
+.menu button {
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+
+  color: #111;
+}

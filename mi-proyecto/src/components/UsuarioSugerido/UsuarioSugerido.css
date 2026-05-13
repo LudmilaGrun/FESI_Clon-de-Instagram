@@ -1,0 +1,35 @@
+.usuario-sugerido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+.usuario-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usuario-info span {
+  color: #111;
+}
+
+.usuario-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.usuario-sugerido button {
+  border: none;
+  background: hotpink;
+
+  color: white;
+
+  padding: 7px 12px;
+  border-radius: 10px;
+
+  cursor: pointer;
+}

@@ -1,91 +1,58 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 import "./Feed.css";
 
+import Historias from "../Historias";
 import Publicacion from "../Publicacion";
 import ModalPublicacion from "../ModalPublicacion";
 
-import { useEffect, useState } from "react";
-
-import { obtenerGatos } from "../../services/catsApi";
-
-function Feed({ busqueda }) {
-  const [publicaciones, setPublicaciones] =
-    useState([]);
-
-  const [publicacionSeleccionada,
-    setPublicacionSeleccionada] =
-    useState(null);
+function Feed() {
+  const [publicaciones, setPublicaciones] = useState([]);
+  const [publicacionSeleccionada, setPublicacionSeleccionada] = useState(null);
 
   useEffect(() => {
-    cargarPublicaciones();
+    axios
+      .get("https://api.thecatapi.com/v1/images/search?limit=10")
+      .then((response) => {
+        const publicacionesFormateadas = response.data.map(
+          (gato, index) => ({
+            id: gato.id,
+            imagen: gato.url,
+            usuario: `cat_user_${index + 1}`,
+            likes: Math.floor(Math.random() * 5000),
+            descripcion: "Living my best cat life 🐱✨",
+          })
+        );
+
+        setPublicaciones(publicacionesFormateadas);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
 
-  const cargarPublicaciones = async () => {
-    const gatos = await obtenerGatos();
-
-    const publicacionesFormateadas =
-      gatos?.map((gato, index) => ({
-        id: gato.id,
-
-        usuario: `cat_user_${index + 1}`,
-
-        imagen: gato.url,
-
-        likes: Math.floor(
-          Math.random() * 1000
-        ),
-
-        descripcion:
-          "Disfrutando una vida gatuna 🐱",
-      }));
-
-    setPublicaciones(publicacionesFormateadas);
-  };
-
   return (
-    <>
-      <section className="feed">
+    <div className="feed">
+      <Historias />
 
-  {publicaciones
-    .filter((publicacion) =>
-      publicacion.usuario
-        .toLowerCase()
-        .includes(busqueda.toLowerCase())
-    )
-    .map((publicacion) => (
-
-      <div
-        key={publicacion.id}
-        onClick={() =>
-          setPublicacionSeleccionada(
-            publicacion
-          )
-        }
-      >
-
+      {publicaciones.map((publicacion) => (
         <Publicacion
-          usuario={publicacion.usuario}
-          imagen={publicacion.imagen}
-          likes={publicacion.likes}
-          descripcion={
-            publicacion.descripcion
+          key={`${publicacion.id}-${publicacion.usuario}`}
+          publicacion={publicacion}
+          seleccionarPublicacion={setPublicacionSeleccionada}
+        />
+      ))}
+
+      {publicacionSeleccionada && (
+        <ModalPublicacion
+          publicacion={publicacionSeleccionada}
+          cerrarModal={() =>
+            setPublicacionSeleccionada(null)
           }
         />
-
-      </div>
-
-    ))}
-
-</section>
-
-      <ModalPublicacion
-        publicacion={
-          publicacionSeleccionada
-        }
-        cerrarModal={() =>
-          setPublicacionSeleccionada(null)
-        }
-      />
-    </>
+      )}
+    </div>
   );
 }
 

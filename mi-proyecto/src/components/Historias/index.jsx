@@ -1,25 +1,18 @@
 import "./Historias.css";
 
-function Historias() {
-  const historias = [
-    "🐱",
-    "😺",
-    "😸",
-    "😹",
-    "😻",
-    "😼",
-  ];
+import historias from "../../data/historias";
+import Historia from "../Historia";
 
+function Historias() {
   return (
-    <section className="historias">
-      {historias.map((historia, index) => (
-        <div className="historia" key={index}>
-          <div className="circulo-historia">
-            {historia}
-          </div>
-        </div>
+    <div className="historias">
+      {historias.map((historia) => (
+        <Historia
+          key={historia.id}
+          historia={historia}
+        />
       ))}
-    </section>
+    </div>
   );
 }
 

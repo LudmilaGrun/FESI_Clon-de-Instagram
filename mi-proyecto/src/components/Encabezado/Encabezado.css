@@ -1,47 +1,29 @@
 .encabezado {
-  height: 80px;
+  height: 70px;
+  background: white;
+  border-bottom: 1px solid #dbdbdb;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   padding: 0 40px;
 
-  background-color: #151728;
-
-  border-bottom: 1px solid #24263b;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.buscador {
-  width: 320px;
-
-  background-color: #23253d;
-
+.encabezado input {
+  width: 280px;
+  padding: 10px;
+  border-radius: 10px;
   border: none;
-
-  padding: 14px 18px;
-
-  border-radius: 14px;
-
-  color: white;
-
-  font-size: 15px;
+  background: #efefef;
 }
 
-.buscador::placeholder {
-  color: #9ea1b3;
-}
-
-.usuario-header {
+.iconos {
   display: flex;
-  align-items: center;
-
-  gap: 12px;
-}
-
-.usuario-header img {
-  width: 42px;
-  height: 42px;
-
-  border-radius: 50%;
+  gap: 20px;
+  font-size: 22px;
 }

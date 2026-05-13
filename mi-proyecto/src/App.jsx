@@ -1,59 +1,24 @@
-import "./styles/index.css";
-
-import { useState } from "react";
+import "./App.css";
 
 import Encabezado from "./components/Encabezado";
-import Sidebar from "./components/Sidebar";
+import BarraLateral from "./components/BarraLateral";
 import Feed from "./components/Feed";
-import Historias from "./components/Historias";
-import Perfil from "./components/Perfil";
+import Sugerencias from "./components/Sugerencias";
 
 function App() {
-
-  const [vistaActual, setVistaActual] =
-    useState("feed");
-
-  const [busqueda, setBusqueda] =
-    useState("");
-
   return (
-    <div>
+    <div className="app">
+      <Encabezado />
 
-      <Encabezado
-        busqueda={busqueda}
-        setBusqueda={setBusqueda}
-      />
+      <div className="layout">
+        <BarraLateral />
 
-      <div className="contenido-principal">
-
-        <Sidebar
-          setVistaActual={setVistaActual}
-        />
-
-        <main>
-
-          {vistaActual === "feed" && (
-            <>
-              <Historias />
-
-              <Feed
-                busqueda={busqueda}
-              />
-            </>
-          )}
-
-          {vistaActual === "perfil" && (
-            <Perfil />
-          )}
-
+        <main className="feed-principal">
+          <Feed />
         </main>
 
-        {vistaActual === "feed" && (
-          <Perfil />
-        )}
-
+        <Sugerencias />
       </div>
-
     </div>
   );
 }

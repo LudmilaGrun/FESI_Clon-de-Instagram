@@ -1,0 +1,19 @@
+.encabezado-publicacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+}
+
+.usuario-publicacion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usuario-publicacion img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

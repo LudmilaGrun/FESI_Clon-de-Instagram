@@ -1,0 +1,59 @@
+.tarjeta-perfil {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 15px;
+
+  border: 1px solid #dbdbdb;
+}
+
+.tarjeta-perfil h2 {
+  color: #111;
+}
+
+.tarjeta-perfil p {
+  color: #555;
+  text-align: center;
+}
+
+.tarjeta-perfil img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.estadisticas {
+  display: flex;
+  gap: 20px;
+}
+
+.estadisticas div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.estadisticas strong {
+  color: #111;
+}
+
+.estadisticas span {
+  color: #777;
+}
+
+.tarjeta-perfil button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+
+  background: #ff4fa3;
+  color: white;
+
+  cursor: pointer;
+}

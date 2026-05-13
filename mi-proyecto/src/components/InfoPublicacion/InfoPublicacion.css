@@ -1,0 +1,19 @@
+.info-publicacion {
+  padding: 0 15px 15px;
+}
+
+.likes {
+  font-weight: bold;
+  margin-bottom: 8px;
+
+  color: #111;
+}
+
+.info-publicacion p {
+  color: #111;
+}
+
+.comentarios {
+  color: gray;
+  font-size: 14px;
+}
