@@ -4,16 +4,15 @@ function TarjetaPerfil() {
   return (
     <div className="tarjeta-perfil">
       <img
-        src="https://i.pravatar.cc/150?img=32"
-        alt=""
+        src="https://i.pravatar.cc/300"
+        alt="perfil"
       />
 
-      <h2>ludmilita</h2>
+      <h2>
+        ludmilita ✓
+      </h2>
 
-      <p>
-        aesthetic girl ✨ <br />
-        cat lover 🐈
-      </p>
+      <p>@ludmilita</p>
 
       <div className="estadisticas">
         <div>
@@ -22,7 +21,7 @@ function TarjetaPerfil() {
         </div>
 
         <div>
-          <strong>1.2k</strong>
+          <strong>1.2K</strong>
           <span>Followers</span>
         </div>
 
@@ -32,7 +31,14 @@ function TarjetaPerfil() {
         </div>
       </div>
 
-      <button>Editar perfil</button>
+      <p className="bio">
+        aesthetic girl <br />
+        cat lover 🐱
+      </p>
+
+      <button>
+        Editar perfil
+      </button>
     </div>
   );
 }

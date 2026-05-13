@@ -3,6 +3,8 @@
   justify-content: space-between;
   align-items: center;
 
+  padding: 22px 30px;
+
   margin-bottom: 25px;
 
   background:
@@ -14,23 +16,29 @@
     1px solid rgba(255,255,255,0.08);
 
   border-radius: 28px;
+}
 
-  padding: 22px 28px;
+.encabezado h1 {
+  color: white;
+
+  font-size: 28px;
+
+  font-weight: 700;
 }
 
 .encabezado input {
-  width: 420px;
+  width: 320px;
 
-  background:
-    rgba(255,255,255,0.06);
+  padding: 15px;
 
   border: none;
 
   outline: none;
 
-  padding: 16px;
-
   border-radius: 16px;
+
+  background:
+    rgba(255,255,255,0.06);
 
   color: white;
 }
@@ -43,32 +51,40 @@
   display: flex;
   align-items: center;
 
-  gap: 18px;
+  gap: 20px;
 }
 
 .acciones-header span {
+  color: white;
+
   font-size: 22px;
 
   cursor: pointer;
 }
 
 .acciones-header button {
-  background:
-    linear-gradient(
-      135deg,
-      #ff4d6d,
-      #ff758f
-    );
-
   border: none;
 
-  padding: 14px 20px;
+  padding: 14px 22px;
 
   border-radius: 16px;
 
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #a855f7
+    );
+
   color: white;
+
+  font-weight: bold;
 
   cursor: pointer;
 
-  font-weight: bold;
+  transition: 0.2s;
+}
+
+.acciones-header button:hover {
+  transform: scale(1.03);
 }
