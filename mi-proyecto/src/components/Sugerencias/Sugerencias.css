@@ -1,0 +1,17 @@
+.sugerencias {
+  width: 260px;
+
+  background: #fffdfb;
+
+  border-radius: 30px;
+
+  padding: 24px;
+
+  border: 1px solid #f1ece7;
+}
+
+.sugerencias h3 {
+  color: #262626;
+
+  margin-bottom: 20px;
+}

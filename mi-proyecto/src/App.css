@@ -2,22 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 
-  color: #111;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  background-color: #fafafa;
+  background: #fcfbf8;
 }
 
 .layout {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  padding: 30px;
+
+  gap: 35px;
+
+  padding: 35px 40px;
 }
 
 .feed-principal {
-  width: 600px;
+  width: 630px;
 }

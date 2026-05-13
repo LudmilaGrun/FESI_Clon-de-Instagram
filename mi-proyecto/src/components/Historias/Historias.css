@@ -1,10 +1,15 @@
 .historias {
-  background: white;
-  border-radius: 20px;
-  padding: 20px;
+  background: #fffdfb;
+
+  padding: 22px;
+
+  border-radius: 30px;
 
   display: flex;
+
   gap: 20px;
 
   overflow-x: auto;
+
+  border: 1px solid #f1ece7;
 }

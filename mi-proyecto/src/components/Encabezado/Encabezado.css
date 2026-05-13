@@ -1,29 +1,49 @@
 .encabezado {
-  height: 70px;
-  background: white;
-  border-bottom: 1px solid #dbdbdb;
+  width: 100%;
+
+  background: #fffdfb;
+
+  padding: 22px 45px;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 
-  padding: 0 40px;
+  border-bottom: 1px solid #f1ece7;
+}
 
-  position: sticky;
-  top: 0;
-  z-index: 100;
+.encabezado h1 {
+  font-size: 30px;
+
+  font-weight: 700;
+
+  color: #262626;
 }
 
 .encabezado input {
-  width: 280px;
-  padding: 10px;
-  border-radius: 10px;
+  width: 320px;
+
+  padding: 14px 18px;
+
   border: none;
-  background: #efefef;
+
+  border-radius: 16px;
+
+  background: #f6f1eb;
+
+  outline: none;
+
+  color: #444;
 }
 
 .iconos {
   display: flex;
+
   gap: 20px;
+}
+
+.iconos span {
   font-size: 22px;
+
+  cursor: pointer;
 }

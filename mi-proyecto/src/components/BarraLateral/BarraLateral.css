@@ -1,28 +1,47 @@
 .barra-lateral {
-  width: 250px;
+  width: 270px;
+
   display: flex;
   flex-direction: column;
+
   gap: 25px;
 }
 
 .menu {
-  background: white;
-  border-radius: 20px;
-  padding: 20px;
+  background: #fffdfb;
+
+  border-radius: 28px;
+
+  padding: 24px;
 
   display: flex;
   flex-direction: column;
-  gap: 15px;
 
-  border: 1px solid #dbdbdb;
+  gap: 18px;
+
+  border: 1px solid #f1ece7;
 }
 
 .menu button {
   border: none;
-  background: none;
+
+  background: transparent;
+
+  padding: 14px 18px;
+
+  border-radius: 18px;
+
   text-align: left;
-  font-size: 16px;
+
+  font-size: 15px;
+
+  color: #444;
+
   cursor: pointer;
 
-  color: #111;
+  transition: 0.2s;
+}
+
+.menu button:hover {
+  background: #f6f1eb;
 }
