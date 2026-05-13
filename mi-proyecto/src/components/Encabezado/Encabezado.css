@@ -1,49 +1,74 @@
 .encabezado {
-  width: 100%;
-
-  background: #fffdfb;
-
-  padding: 22px 45px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: 1px solid #f1ece7;
-}
+  margin-bottom: 25px;
 
-.encabezado h1 {
-  font-size: 30px;
+  background:
+    rgba(255,255,255,0.05);
 
-  font-weight: 700;
+  backdrop-filter: blur(18px);
 
-  color: #262626;
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius: 28px;
+
+  padding: 22px 28px;
 }
 
 .encabezado input {
-  width: 320px;
+  width: 420px;
 
-  padding: 14px 18px;
+  background:
+    rgba(255,255,255,0.06);
 
   border: none;
 
-  border-radius: 16px;
-
-  background: #f6f1eb;
-
   outline: none;
 
-  color: #444;
+  padding: 16px;
+
+  border-radius: 16px;
+
+  color: white;
 }
 
-.iconos {
+.encabezado input::placeholder {
+  color: #94a3b8;
+}
+
+.acciones-header {
   display: flex;
+  align-items: center;
 
-  gap: 20px;
+  gap: 18px;
 }
 
-.iconos span {
+.acciones-header span {
   font-size: 22px;
 
   cursor: pointer;
+}
+
+.acciones-header button {
+  background:
+    linear-gradient(
+      135deg,
+      #ff4d6d,
+      #ff758f
+    );
+
+  border: none;
+
+  padding: 14px 20px;
+
+  border-radius: 16px;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: bold;
 }

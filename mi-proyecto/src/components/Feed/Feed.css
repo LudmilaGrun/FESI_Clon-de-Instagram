@@ -1,5 +1,12 @@
 .feed {
   display: flex;
   flex-direction: column;
+
   gap: 25px;
+}
+
+.publicaciones-grid {
+  columns: 3 280px;
+
+  column-gap: 20px;
 }

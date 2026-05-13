@@ -1,4 +1,5 @@
 import "./BarraLateral.css";
+
 import TarjetaPerfil from "../TarjetaPerfil";
 
 function BarraLateral() {
@@ -7,10 +8,25 @@ function BarraLateral() {
       <TarjetaPerfil />
 
       <nav className="menu">
-        <button>🏠 Inicio</button>
-        <button>🔍 Explorar</button>
-        <button>❤️ Notificaciones</button>
-        <button>⚙️ Configuración</button>
+        <button className="activo">
+          🏠 Home
+        </button>
+
+        <button>
+          🔍 Explore
+        </button>
+
+        <button>
+          🎬 Reels
+        </button>
+
+        <button>
+          📺 IGTV
+        </button>
+
+        <button>
+          🔔 Notification
+        </button>
       </nav>
     </aside>
   );

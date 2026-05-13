@@ -1,21 +1,19 @@
 .info-publicacion {
-  padding: 0 18px 22px;
+  padding: 18px;
 }
 
 .info-publicacion p {
-  color: #444;
+  color: #dbe4f0;
 
   line-height: 1.5;
 }
 
 .info-publicacion strong {
-  color: #262626;
+  color: white;
 }
 
 .comentarios {
-  color: #a29b95;
-
-  font-size: 14px;
+  color: #94a3b8;
 
   margin-top: 8px;
 

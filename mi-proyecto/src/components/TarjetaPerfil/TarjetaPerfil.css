@@ -1,23 +1,15 @@
 .tarjeta-perfil {
-  background: #fffdfb;
-
-  border-radius: 30px;
-
-  padding: 30px;
-
   display: flex;
   flex-direction: column;
 
   align-items: center;
 
-  gap: 18px;
-
-  border: 1px solid #f1ece7;
+  gap: 16px;
 }
 
 .tarjeta-perfil img {
-  width: 105px;
-  height: 105px;
+  width: 90px;
+  height: 90px;
 
   border-radius: 50%;
 
@@ -25,54 +17,46 @@
 }
 
 .tarjeta-perfil h2 {
-  color: #262626;
-
-  font-size: 22px;
+  color: white;
 }
 
 .tarjeta-perfil p {
-  color: #8a817c;
+  color: #94a3b8;
 
   text-align: center;
-
-  line-height: 1.4;
 }
 
 .estadisticas {
   display: flex;
 
-  gap: 28px;
-}
-
-.estadisticas div {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
+  gap: 25px;
 }
 
 .estadisticas strong {
-  color: #262626;
+  color: white;
 }
 
 .estadisticas span {
-  color: #8a817c;
+  color: #94a3b8;
 }
 
 .tarjeta-perfil button {
   width: 100%;
 
-  padding: 14px;
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
 
   border: none;
 
-  border-radius: 18px;
+  padding: 14px;
 
-  background: #262626;
+  border-radius: 14px;
 
   color: white;
-
-  font-weight: 600;
 
   cursor: pointer;
 }

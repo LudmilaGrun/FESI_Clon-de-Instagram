@@ -7,18 +7,26 @@
 }
 
 body {
-  background: #fcfbf8;
+  background:
+    linear-gradient(
+      135deg,
+      #111827,
+      #1e293b
+    );
+
+  color: white;
+
+  min-height: 100vh;
 }
 
 .layout {
   display: flex;
-  justify-content: center;
 
-  gap: 35px;
+  gap: 30px;
 
-  padding: 35px 40px;
+  padding: 30px;
 }
 
 .feed-principal {
-  width: 630px;
+  flex: 1;
 }

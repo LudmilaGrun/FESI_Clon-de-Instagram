@@ -9,26 +9,35 @@ import ModalPublicacion from "../ModalPublicacion";
 
 function Feed() {
   const [publicaciones, setPublicaciones] = useState([]);
-  const [publicacionSeleccionada, setPublicacionSeleccionada] = useState(null);
+
+  const [publicacionSeleccionada, setPublicacionSeleccionada] =
+    useState(null);
 
   useEffect(() => {
     axios
-      .get("https://api.thecatapi.com/v1/images/search?limit=10")
+      .get(
+        "https://api.thecatapi.com/v1/images/search?limit=10"
+      )
       .then((response) => {
-        const publicacionesFormateadas = response.data.map(
-          (gato, index) => ({
+        const publicacionesFormateadas =
+          response.data.map((gato, index) => ({
             id: gato.id,
-            imagen: gato.url,
-            usuario: `cat_user_${index + 1}`,
-            likes: Math.floor(Math.random() * 5000),
-            descripcion: "Living my best cat life 🐱✨",
-          })
-        );
 
-        setPublicaciones(publicacionesFormateadas);
-      })
-      .catch((error) => {
-        console.log(error);
+            imagen: gato.url,
+
+            usuario: `user_${index + 1}`,
+
+            likes: Math.floor(
+              Math.random() * 5000
+            ),
+
+            descripcion:
+              "There is something here",
+          }));
+
+        setPublicaciones(
+          publicacionesFormateadas
+        );
       });
   }, []);
 
@@ -36,19 +45,29 @@ function Feed() {
     <div className="feed">
       <Historias />
 
-      {publicaciones.map((publicacion) => (
-        <Publicacion
-          key={`${publicacion.id}-${publicacion.usuario}`}
-          publicacion={publicacion}
-          seleccionarPublicacion={setPublicacionSeleccionada}
-        />
-      ))}
+      <div className="publicaciones-grid">
+        {publicaciones.map(
+          (publicacion) => (
+            <Publicacion
+              key={publicacion.id}
+              publicacion={publicacion}
+              seleccionarPublicacion={
+                setPublicacionSeleccionada
+              }
+            />
+          )
+        )}
+      </div>
 
       {publicacionSeleccionada && (
         <ModalPublicacion
-          publicacion={publicacionSeleccionada}
+          publicacion={
+            publicacionSeleccionada
+          }
           cerrarModal={() =>
-            setPublicacionSeleccionada(null)
+            setPublicacionSeleccionada(
+              null
+            )
           }
         />
       )}

@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
 
-  margin-top: 18px;
+  margin-bottom: 18px;
 }
 
 .usuario-info {
@@ -14,28 +14,31 @@
 }
 
 .usuario-info img {
-  width: 42px;
-  height: 42px;
+  width: 45px;
+  height: 45px;
 
   border-radius: 50%;
 }
 
 .usuario-info span {
-  color: #444;
-
-  font-size: 14px;
+  color: white;
 }
 
 .usuario-sugerido button {
   border: none;
 
-  background: #262626;
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
 
   color: white;
 
   padding: 8px 14px;
 
-  border-radius: 14px;
+  border-radius: 12px;
 
   cursor: pointer;
 }

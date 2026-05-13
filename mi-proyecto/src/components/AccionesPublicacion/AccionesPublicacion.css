@@ -4,12 +4,11 @@
   display: flex;
   flex-direction: column;
 
-  gap: 12px;
+  gap: 10px;
 }
 
 .iconos-acciones {
   display: flex;
-
   gap: 18px;
 }
 
@@ -18,15 +17,11 @@
 
   cursor: pointer;
 
-  transition: 0.2s;
-}
-
-.iconos-acciones span:hover {
-  transform: scale(1.08);
+  color: white;
 }
 
 .cantidad-likes {
-  font-weight: 700;
+  color: white;
 
-  color: #262626;
+  font-weight: bold;
 }
