@@ -11,7 +11,9 @@ function ModalPublicacion({
     >
       <div
         className="modal-contenido"
-        onClick={(e) => e.stopPropagation()}
+        onClick={(e) =>
+          e.stopPropagation()
+        }
       >
         <img
           src={publicacion.imagen}
@@ -19,19 +21,63 @@ function ModalPublicacion({
         />
 
         <div className="info-modal">
-          <h2>{publicacion.usuario}</h2>
+          <h2>
+            {publicacion.usuario}
+          </h2>
 
-          <p>{publicacion.descripcion}</p>
+          <p>
+            {publicacion.descripcion}
+          </p>
 
           <span className="likes-modal">
             {publicacion.likes} likes
           </span>
 
-          <p className="comentarios-modal">
-            Meow meow 😺 <br />
-            So cute ✨ <br />
-            Amazing cat 🐱
-          </p>
+          <div className="comentarios-modal">
+            <div className="comentario">
+              <strong>
+                milo.cat
+              </strong>
+
+              <span>
+                this aesthetic is
+                EVERYTHING ✨
+              </span>
+            </div>
+
+            <div className="comentario">
+              <strong>
+                nala.jpg
+              </strong>
+
+              <span>
+                obsessed with this
+                post 😭
+              </span>
+            </div>
+
+            <div className="comentario">
+              <strong>
+                kitty.world
+              </strong>
+
+              <span>
+                literally the cutest
+                vibe ever 🐱
+              </span>
+            </div>
+
+            <div className="comentario">
+              <strong>
+                pixel.cat
+              </strong>
+
+              <span>
+                the colors are so
+                pretty omg
+              </span>
+            </div>
+          </div>
 
           <button
             className="boton-cerrar"
