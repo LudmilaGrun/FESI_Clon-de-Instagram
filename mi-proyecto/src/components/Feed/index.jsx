@@ -37,6 +37,8 @@ function Feed() {
                 Math.random() * 5000
               ),
 
+              liked: false,
+
               descripcion:
                 "There is something here",
             })
@@ -47,6 +49,43 @@ function Feed() {
         );
       });
   }, []);
+
+  const toggleLike = (id) => {
+    setPublicaciones((prev) =>
+      prev.map((pub) => {
+        if (pub.id === id) {
+          return {
+            ...pub,
+
+            liked: !pub.liked,
+
+            likes: pub.liked
+              ? pub.likes - 1
+              : pub.likes + 1,
+          };
+        }
+
+        return pub;
+      })
+    );
+
+    if (
+      publicacionSeleccionada &&
+      publicacionSeleccionada.id === id
+    ) {
+      setPublicacionSeleccionada(
+        (prev) => ({
+          ...prev,
+
+          liked: !prev.liked,
+
+          likes: prev.liked
+            ? prev.likes - 1
+            : prev.likes + 1,
+        })
+      );
+    }
+  };
 
   return (
     <div className="feed">
@@ -73,6 +112,9 @@ function Feed() {
                 }
                 seleccionarPublicacion={
                   setPublicacionSeleccionada
+                }
+                toggleLike={
+                  toggleLike
                 }
               />
             )

@@ -7,6 +7,7 @@ import InfoPublicacion from "../InfoPublicacion";
 function Publicacion({
   publicacion,
   seleccionarPublicacion,
+  toggleLike,
 }) {
   return (
     <article className="publicacion">
@@ -19,12 +20,18 @@ function Publicacion({
         src={publicacion.imagen}
         alt="gato"
         onClick={() =>
-          seleccionarPublicacion(publicacion)
+          seleccionarPublicacion(
+            publicacion
+          )
         }
       />
 
       <AccionesPublicacion
-        likesIniciales={publicacion.likes}
+        likes={publicacion.likes}
+        liked={publicacion.liked}
+        onLike={() =>
+          toggleLike(publicacion.id)
+        }
       />
 
       <InfoPublicacion
