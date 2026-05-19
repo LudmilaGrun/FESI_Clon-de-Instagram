@@ -10,3 +10,25 @@
 
   column-gap: 20px;
 }
+
+.feed {
+  width: 100%;
+}
+
+.seccion-feed {
+  margin-bottom: 40px;
+}
+
+.titulo-seccion {
+  color: white;
+
+  font-size: 22px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 20px;
+
+  padding-left: 5px;
+}

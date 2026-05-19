@@ -8,10 +8,13 @@ import Publicacion from "../Publicacion";
 import ModalPublicacion from "../ModalPublicacion";
 
 function Feed() {
-  const [publicaciones, setPublicaciones] = useState([]);
+  const [publicaciones, setPublicaciones] =
+    useState([]);
 
-  const [publicacionSeleccionada, setPublicacionSeleccionada] =
-    useState(null);
+  const [
+    publicacionSeleccionada,
+    setPublicacionSeleccionada,
+  ] = useState(null);
 
   useEffect(() => {
     axios
@@ -20,20 +23,24 @@ function Feed() {
       )
       .then((response) => {
         const publicacionesFormateadas =
-          response.data.map((gato, index) => ({
-            id: gato.id,
+          response.data.map(
+            (gato, index) => ({
+              id: gato.id,
 
-            imagen: gato.url,
+              imagen: gato.url,
 
-            usuario: `user_${index + 1}`,
+              usuario: `user_${
+                index + 1
+              }`,
 
-            likes: Math.floor(
-              Math.random() * 5000
-            ),
+              likes: Math.floor(
+                Math.random() * 5000
+              ),
 
-            descripcion:
-              "There is something here",
-          }));
+              descripcion:
+                "There is something here",
+            })
+          );
 
         setPublicaciones(
           publicacionesFormateadas
@@ -43,20 +50,34 @@ function Feed() {
 
   return (
     <div className="feed">
-      <Historias />
+      <div className="seccion-feed">
+        <h2 className="titulo-seccion">
+          STORIES
+        </h2>
 
-      <div className="publicaciones-grid">
-        {publicaciones.map(
-          (publicacion) => (
-            <Publicacion
-              key={publicacion.id}
-              publicacion={publicacion}
-              seleccionarPublicacion={
-                setPublicacionSeleccionada
-              }
-            />
-          )
-        )}
+        <Historias />
+      </div>
+
+      <div className="seccion-feed">
+        <h2 className="titulo-seccion">
+          TRENDING
+        </h2>
+
+        <div className="publicaciones-grid">
+          {publicaciones.map(
+            (publicacion) => (
+              <Publicacion
+                key={publicacion.id}
+                publicacion={
+                  publicacion
+                }
+                seleccionarPublicacion={
+                  setPublicacionSeleccionada
+                }
+              />
+            )
+          )}
+        </div>
       </div>
 
       {publicacionSeleccionada && (

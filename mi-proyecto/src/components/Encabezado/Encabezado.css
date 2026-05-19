@@ -1,21 +1,13 @@
 .encabezado {
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
 
-  padding: 22px 30px;
+  padding: 22px 0;
 
   margin-bottom: 25px;
-
-  background:
-    rgba(255,255,255,0.05);
-
-  backdrop-filter: blur(18px);
-
-  border:
-    1px solid rgba(255,255,255,0.08);
-
-  border-radius: 28px;
 }
 
 .encabezado h1 {
@@ -49,6 +41,7 @@
 
 .acciones-header {
   display: flex;
+
   align-items: center;
 
   gap: 20px;

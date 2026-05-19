@@ -7,7 +7,7 @@ function Encabezado() {
 
       <input
         type="text"
-        placeholder="Search"
+        placeholder="Username, hashtag and story search"
       />
 
       <div className="acciones-header">
